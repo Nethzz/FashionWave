@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "A08Alu25mGPVIokWZw5MpWUjoHb5qPHT05eZzK9HANw=",
+  "Source": "RegApi",
+  "BasePath": "_content/RegApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "RegApi\\wwwroot",
+      "Source": "RegApi",
+      "ContentRoot": "C:\\Users\\lichu\\Documents\\neethu\\ASP.NET-20250121T134922Z-001\\ASP.NET\\RegApi\\RegApi\\wwwroot\\",
+      "BasePath": "_content/RegApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
