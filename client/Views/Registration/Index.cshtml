@@ -1,0 +1,55 @@
+﻿@model List<RegClient.Models.Addproducts>
+
+@{
+    Layout = "~/Views/Shared/_UserNav.cshtml";
+}
+@using System.Globalization
+<hr />
+@* Adding pagination *@
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Products</h2>
+    <form method="get" asp-action="Index" class="float-end">
+        <input type="text" name="searchTerm" value="@ViewBag.SearchTerm" placeholder="Search products..." class="form-control" style="display:inline-block; width: auto;" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
+@if (Model != null && Model.Count > 0)
+{
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            @if (item.Quantity > 0)
+            {
+                <div class="col-3">
+                    <div class="card ms-3 mt-4">
+                        <img src="@($"https://localhost:7165/{item.ProductImg}")" class="card-img-top" alt="Product image" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.ProductName)</h5>
+                            <p>In Stock: @item.Quantity</p>
+                            <p class="card-text"><b>Description</b><br />@Html.DisplayFor(modelItem => item.ProductDescription)</p>
+                            <p>@item.Price.ToString("C", new CultureInfo("en-IN"))</p>
+
+                            <form asp-action="Details" asp-controller="Shop" method="post">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" class="btn btn-primary">Details</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+}
+else
+{
+    <h1 class="text-center">No products Found</h1>
+}
+
+
+
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <p style="color:red;">@ViewBag.ErrorMessage</p>
+}

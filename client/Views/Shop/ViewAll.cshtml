@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RegClient.Models.ProductPayMent>
+@using System.Globalization
+
+@{
+    Layout = "~/Views/Shared/_ShopOwnerNav.cshtml";
+}
+
+<hr />
+
+<h2>Your Products</h2>
+<hr />
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+
+                <th>Address</th>
+                <th>Price</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    
+                    <td>@product.Address</td> <!-- Ensure Price is part of ProductPayMent -->
+                    <td>@product.Amount</td> <!-- Ensure Quantity is part of ProductPayMent -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h1 class="text-center">No User Brought Product</h1>
+}

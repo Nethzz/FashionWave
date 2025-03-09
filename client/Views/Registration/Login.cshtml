@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_LandingPage.cshtml";
+}
+
+
+<h2>User Login</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div style="color: red;">@ViewBag.ErrorMessage</div> <!-- Display error message -->
+}
+
+<form asp-action="Login" method="post">
+    <div>
+        <label>Username</label>
+        <input type="text" name="username" required class="form-control"/>
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" name="password" required  class="form-control"/>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</form>

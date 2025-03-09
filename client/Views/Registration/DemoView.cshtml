@@ -1,0 +1,14 @@
+﻿<!-- Debugging: Display the path to check if it's correct -->
+<p>Image Path: @ViewBag.ImagePath</p>
+
+<!-- Display the image -->
+<img src="@ViewBag.ImagePath" alt="Image from Session" />
+
+<!-- If the image requires a full URL, ensure you prepend the correct URL -->
+<img src="https://localhost:7165/@ViewBag.ImagePath" alt="Image from Session" class="img-fluid" />
+<p>Session Image Path: @ViewBag.ImagePath</p>
+<img src="@ViewBag.ImagePath" alt="Session Image" />
+
+<!-- Try hardcoding the path as well for comparison -->
+<img src="/Images/logo.png" alt="Hardcoded Image" />
+<img src=" D:/ASP.NET/RegApi/RegApi/Images/Screenshot 2023-11-09 193543.png" />

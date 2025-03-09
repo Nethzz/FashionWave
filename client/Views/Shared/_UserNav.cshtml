@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionWave</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RegClient.styles.css" asp-append-version="true" />
+    <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <!-- Project Name -->
+            <a class="navbar-brand fw-bold text-primary" href="#">FashionWave</a>
+
+            <!-- Toggle button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+                <!-- Left-side navigation links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" asp-action="" asp-controller="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Index" asp-controller="Registration">View Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="updateprofile" asp-controller="Registration">Update Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Logout" asp-controller="Registration">Logout</a>
+                    </li>
+                </ul>
+
+                <!-- Right-side profile section -->
+                <span class="navbar-text d-flex align-items-center">
+                    <ul class="navbar-nav">
+                        <!-- Displaying the user's name -->
+                        <li class="nav-item me-3">
+                            <p class="nav-link mb-0" href="#">@ViewBag.Name</p>
+                        </li>
+
+                        <!-- Displaying the user's profile image -->
+                        <li class="nav-item">
+                            @if (!string.IsNullOrEmpty(ViewBag.img))
+                            {
+                                <img src="@($"https://localhost:7165/{ViewBag.img}")" class="img-fluid rounded-circle" style="width: 50px; height: 50px;" alt="Profile">
+                            }
+                            else
+                            {
+                                <p class="mb-0">Image not available.</p>
+                            }
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4 py-3 bg-light">
+        <div class="container text-center">
+            &copy; 2024 - FashionWave - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionWave</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RegClient.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Style/LandingPage.css" asp-append-version="true" />
+    <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <!-- Project Name -->
+            <a class="navbar-brand fw-bold text-primary" href="#">FashionWave</a>
+
+            <!-- Toggle button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <!-- Left-side navigation links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="AddProduct" asp-controller="Shop">Product</a>
+                    </li>
+                    -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            User
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" asp-action="Login" asp-controller="Registration">Login</a></li>
+                            <li><a class="dropdown-item" asp-action="Register" asp-controller="Registration">Register</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" asp-action="Login" asp-controller="Shop">Login</a></li>
+                            <li><a class="dropdown-item" asp-action="Shop_reg" asp-controller="Registration">Register</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Hero Section -->
+        <div class="hero-section text-center bg-primary text-white p-5 rounded mb-4">
+            <h1 class="display-4 fw-bold">Welcome to FashionWave</h1>
+            <p class="lead">Explore the latest trends in fashion and shop your favorite styles today.</p>
+            <a href="#" class="btn btn-light btn-lg">Shop Now</a>
+        </div>
+
+        <!-- Features Section -->
+        <div class="row text-center mb-4">
+            <div class="col-md-4">
+                <div class="feature-card p-3 border rounded shadow-sm">
+                    <h5 class="fw-bold">Latest Trends</h5>
+                    <p>Stay ahead with our curated collection of the latest fashion trends.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card p-3 border rounded shadow-sm">
+                    <h5 class="fw-bold">Affordable Prices</h5>
+                    <p>Shop high-quality fashion at prices you'll love.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card p-3 border rounded shadow-sm">
+                    <h5 class="fw-bold">Fast Delivery</h5>
+                    <p>Get your orders delivered quickly and efficiently.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Content Section -->
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4 py-3 bg-light">
+        <div class="container text-center">
+            &copy; 2024 - FashionWave - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

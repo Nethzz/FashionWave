@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_UserNav.cshtml";
+}
+@model ProductPayMent
+
+ProductID: @ViewBag.productid
+<br />
+Customer ID: @ViewBag.customerid
+<br />
+User ID: @ViewBag.ID
+Amount:@ViewBag.Amount
+Amount:@ViewBag.quantity
+Amount:@ViewBag.tot
+
+<form method="post" action="Payment">
+    <div>
+        <input type="hidden" asp-for="Pid" value="@ViewBag.productid" class="form-control" readonly />
+      
+        <label asp-for="Amount"></label>
+        <input asp-for="Amount" value="@ViewBag.tot" class="form-control" readonly/>
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Demo Login</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div style="color: red;">@ViewBag.ErrorMessage</div> <!-- Display error message -->
+}
+
+<form asp-action="DemoLogin" method="post">
+    <div>
+        <label>Username</label>
+        <input type="text" name="username" required class="form-control" />
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" name="password" required  class="form-control"/>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</form>
+<h1>Welcome, @ViewBag.UserName!</h1>
+<p>Your email: @ViewBag.Email</p>
+<p>Your img: @ViewBag.ImagePath</p>
+<img src="https://localhost:7165/@ViewBag.ImagePath" alt="Image from Session" />

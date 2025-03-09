@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "~/Views/Shared/_ShopOwnerNav.cshtml";
+}
+@model Addproducts
+
+<form method="post" enctype="multipart/form-data" action="AddProduct">
+    <!-- Added enctype for file upload -->
+    <div>
+        <label asp-for="ProductName"></label>
+        <input asp-for="ProductName" class="form-control" />
+        <span asp-validation-for="ProductName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity"  class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="ProductDescription"></label>
+        <input asp-for="ProductDescription" class="form-control" />
+        <span asp-validation-for="ProductDescription" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="ProductImg"></label> <!-- Label for the image upload -->
+        <input type="file" asp-for="ProductImg" class="form-control" /> <!-- File input for the image -->
+        <span asp-validation-for="ProductImg" class="text-danger"></span>
+    </div>
+
+    <div>
+        <input type="hidden" asp-for="Pid" value="@ViewBag.Session" class="form-control" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Add Another Product</button>
+    </div>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+            <div class="alert alert-danger">
+            @ViewBag.ErrorMessage
+            </div>
+    }
+</form>
+
+@section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+}

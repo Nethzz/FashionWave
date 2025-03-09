@@ -1,0 +1,24 @@
+﻿@using System.Globalization
+
+@{
+    Layout = "~/Views/Shared/_UserNav.cshtml";
+}
+
+@model RegClient.Models.Addproducts
+<div class="col-3">
+
+    <img src="@($"https://localhost:7165/{Model.ProductImg}")" class="img-fluid" alt="Product image">
+    <p>Product Name: @Model.ProductName</p>
+    <p>Product Description: @Model.ProductDescription</p>
+    <p>Product Price: @Model.Price.ToString("C", new CultureInfo("en-IN"))</p>
+    <p>Product Quantity: @Model.Quantity</p>
+
+    <form asp-action="UpdateQuantity" method="post">
+        <input type="hidden" asp-for="Id" /> <!-- Hidden input for product ID -->
+        <div class="form-group">
+            <label for="Quantity">Select Quantity</label>
+            <input type="number" name="Quantity" min="1" value="1" max="@Model.Quantity" class="form-control col-4" required />
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Buy Now</button> <!-- Submit the form when clicked -->
+    </form>
+</div>

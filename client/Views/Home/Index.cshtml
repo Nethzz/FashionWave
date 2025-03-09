@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Welcome, @ViewBag.UserName!</h1>
+<p>Your email: @ViewBag.Email</p>
+
+<h3>Register</h3>
+               
+<form asp-action="Logout" method="post" style="display:inline;">
+    <button type="submit">Logout</button>
+</form>
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <p style="color:red;">@ViewBag.ErrorMessage</p>
+}
+
+

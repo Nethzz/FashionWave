@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "~/Views/Shared/_LandingPage.cshtml";
+}
+
+@model Registration_Modify  // Ensure the correct namespace
+
+<form action="Register" method="post" enctype="multipart/form-data">
+    <h3>User Registration</h3>
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" type="text" required class="form-control" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" type="email" required class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Age</label>
+        <input asp-for="Age" type="number" required class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Address</label>
+        <input asp-for="Address" type="text" required class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="ImagePath"></label>
+        <input asp-for="ImagePath" class="form-control" type="file" name="profilePicture" />
+    </div>
+    <h3>User Credentials</h3>
+    <div>
+        <label>Username</label>
+        <input asp-for="UserName" type="text" required class="form-control" />
+        @if (ViewData["UserNameError"] != null)
+        {
+            <span class="text-danger">@ViewData["UserNameError"]</span>
+        }
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Password</label>
+        <input asp-for="Password" type="password" required class="form-control" />
+        @if (ViewData["PasswordError"] != null)
+        {
+            <span class="text-danger">@ViewData["PasswordError"]</span>
+        }
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    @if (ViewData["GeneralError"] != null)
+    {
+        <div class="alert alert-danger">
+            @ViewData["GeneralError"]
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

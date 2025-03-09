@@ -1,0 +1,61 @@
+﻿@model Registration
+
+<form method="post" asp-action="Create" enctype="multipart/form-data">
+    <div>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" class="form-control" />
+        @if (ViewData["UserNameError"] != null)
+        {
+            <span class="text-danger">@ViewData["UserNameError"]</span>
+        }
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        @if (ViewData["PasswordError"] != null)
+        {
+            <span class="text-danger">@ViewData["PasswordError"]</span>
+        }
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" type="email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="ImagePath"></label>
+        <input asp-for="ImagePath" class="form-control" type="file" name="profilePicture" />
+    </div>
+
+    @if (ViewData["GeneralError"] != null)
+    {
+        <div class="alert alert-danger">
+            @ViewData["GeneralError"]
+        </div>
+    }
+
+    <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_LandingPage.cshtml";
+}
+
+@model Shop_reg
+
+<form action="Shop_reg" method="post">
+    <div>
+        <label asp-for="ShopLicens"></label>
+        <input asp-for="ShopLicens" class="form-control" />
+        <span asp-validation-for="ShopLicens" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="ShopName"></label>
+        <input asp-for="ShopName" class="form-control" />
+        <span asp-validation-for="ShopName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="ShopType"></label>
+        <input asp-for="ShopType" class="form-control" />
+        <span asp-validation-for="ShopType" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="ShopEmail"></label>
+        <input asp-for="ShopEmail" class="form-control" />
+        <span asp-validation-for="ShopEmail" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+        @if (ViewData["UserNameError"] != null)
+        {
+            <span class="text-danger">@ViewData["UserNameError"]</span>
+        }
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" type="password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        @if (ViewData["PasswordError"] != null)
+        {
+            <span class="text-danger">@ViewData["PasswordError"]</span>
+        }
+    </div>
+    @if (ViewData["GeneralError"] != null)
+    {
+        <div class="alert alert-danger">@ViewData["GeneralError"]</div>
+    }
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

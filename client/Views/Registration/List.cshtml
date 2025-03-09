@@ -1,0 +1,37 @@
+﻿@model IEnumerable<RegClient.Models.Registration_Modify>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.UserName)</th>
+            <th>@Html.DisplayNameFor(model => model.Password)</th>
+            <th>@Html.DisplayNameFor(model => model.UserType)</th>
+            <th>@Html.DisplayNameFor(model => model.Status)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.UserName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Password)</td>
+                <td>@Html.DisplayFor(modelItem => item.UserType)</td>
+                <td>
+                    <span id="status-@item.Id">@Html.DisplayFor(modelItem => item.Status)</span>
+                </td>
+                <td>
+                    <form asp-action="Edit" method="post">
+                        <input type="hidden" name="Id" value="@item.Id" />
+                        <input type="hidden" name="Status" value="@(item.Status == "Active" ? "Inactive" : "Active")" />
+                        <button type="submit" class="btn @(item.Status == "Active" ? "btn-danger" : "btn-success")">
+                            @(item.Status == "Active" ? "Deactivate" : "Activate")
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
