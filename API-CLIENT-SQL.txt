@@ -1,0 +1,506 @@
+USE [master]
+GO
+
+ALTER DATABASE [AP] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [AP] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [AP] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [AP] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [AP] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [AP] SET AUTO_CLOSE ON 
+GO
+ALTER DATABASE [AP] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [AP] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [AP] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [AP] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [AP] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [AP] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [AP] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [AP] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [AP] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [AP] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [AP] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [AP] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [AP] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [AP] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [AP] SET READ_COMMITTED_SNAPSHOT ON 
+GO
+ALTER DATABASE [AP] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [AP] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [AP] SET  MULTI_USER 
+GO
+ALTER DATABASE [AP] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [AP] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [AP] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [AP] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [AP] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [AP] SET QUERY_STORE = OFF
+GO
+USE [AP]
+GO
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[__EFMigrationsHistory](
+	[MigrationId] [nvarchar](150) NOT NULL,
+	[ProductVersion] [nvarchar](32) NOT NULL,
+ CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY CLUSTERED 
+(
+	[MigrationId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[AddProducts]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AddProducts](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Pid] [uniqueidentifier] NOT NULL,
+	[ProductName] [nvarchar](max) NOT NULL,
+	[Price] [int] NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[ProductDescription] [nvarchar](max) NOT NULL,
+	[ProductImg] [nvarchar](max) NULL,
+	[Payment] [nvarchar](max) NULL,
+ CONSTRAINT [PK_AddProducts] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Cars]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Cars](
+	[id] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[EstablishedYear] [int] NOT NULL,
+	[Price] [int] NOT NULL,
+ CONSTRAINT [PK_Cars] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Customers]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Customers](
+	[Id] [uniqueidentifier] NOT NULL,
+	[FirstName] [nvarchar](100) NOT NULL,
+	[LastName] [nvarchar](100) NOT NULL,
+	[PhoneNo] [nvarchar](100) NOT NULL,
+	[Email] [nvarchar](100) NOT NULL,
+ CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PersonalDetails]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PersonalDetails](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[Email] [nvarchar](max) NOT NULL,
+	[Age] [int] NOT NULL,
+	[Address] [nvarchar](max) NOT NULL,
+	[Imagepath] [nvarchar](max) NULL,
+ CONSTRAINT [PK_PersonalDetails] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[productPayMents]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[productPayMents](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Pid] [uniqueidentifier] NOT NULL,
+	[Uid] [uniqueidentifier] NOT NULL,
+	[Cid] [uniqueidentifier] NOT NULL,
+	[Amount] [nvarchar](max) NOT NULL,
+	[Address] [nvarchar](max) NOT NULL,
+	[Payment] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_productPayMents] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Regs]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Regs](
+	[Id] [uniqueidentifier] NOT NULL,
+	[UserName] [nvarchar](max) NOT NULL,
+	[Password] [nvarchar](max) NOT NULL,
+	[Email] [nvarchar](max) NOT NULL,
+	[Age] [int] NOT NULL,
+	[Address] [nvarchar](max) NOT NULL,
+	[ImagePath] [nvarchar](max) NULL,
+ CONSTRAINT [PK_Regs] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[shopOwners]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[shopOwners](
+	[Id] [uniqueidentifier] NOT NULL,
+	[ShopLicens] [nvarchar](max) NOT NULL,
+	[ShopName] [nvarchar](max) NOT NULL,
+	[ShopType] [nvarchar](max) NOT NULL,
+	[ShopEmail] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_shopOwners] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[student]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[student](
+	[Id] [uniqueidentifier] NOT NULL,
+	[FirstName] [nvarchar](100) NULL,
+	[LastName] [nvarchar](100) NULL,
+	[PhoneNo] [nvarchar](100) NULL,
+	[Email] [nvarchar](100) NULL,
+ CONSTRAINT [PK_student] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[User](
+	[UserId] [int] IDENTITY(1,1) NOT NULL,
+	[Username] [nvarchar](50) NOT NULL,
+	[Email] [nvarchar](100) NOT NULL,
+	[PasswordHash] [nvarchar](255) NOT NULL,
+	[CreatedAt] [datetime2](7) NOT NULL,
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[UserId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[UserCredentials]    Script Date: 1/21/2025 9:28:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UserCredentials](
+	[Id] [uniqueidentifier] NOT NULL,
+	[UserName] [nvarchar](max) NOT NULL,
+	[Password] [nvarchar](max) NOT NULL,
+	[UserType] [nvarchar](max) NOT NULL,
+	[Status] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_UserCredentials] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240917043206_init', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240918091224_init', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240918094330_as', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240918104645_init', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240919044230_reg', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240919054908_init', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240919072437_inis', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240921044950_img', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240921090320_remove', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240921091513_addedimg', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240921093800_img_binary', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240921093936_remove_binary', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240921094034_remove2_binary', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240922044916_hp', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240922045102_hs', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240922045632_reg', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240922062541_persional-user', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240923082255_shoptable', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240924045432_product', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240924050620_product-quantity', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240924051322_product-quantit', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240924051912_product-quanti', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240924053300_adding-product-clean', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240924055204_adding-product-clean', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240924055235_bb', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240926040631_img', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240926161431_imgs', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240926165229_add-img', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240927050118_remove', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240927052429_add', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240927053101_a', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240927082846_nit', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240929071611_init', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240929071654_no', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240929080643_ini', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240929083828_product', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240930122421_inits', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240930122852_payments', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240930134051_amountStatus', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240930135608_removed_amountStatus', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20240930141044_re', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20241001040715_address', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20241001043345_PAyment', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20241001050430_PAyme', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20241001050633_add_product', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20241005052011_pay', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20241024045535_persion_img', N'7.0.8')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20241211170325_init', N'9.0.0')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20241211170416_inits', N'9.0.0')
+GO
+INSERT [dbo].[AddProducts] ([Id], [Pid], [ProductName], [Price], [Quantity], [ProductDescription], [ProductImg], [Payment]) VALUES (N'ffe0a74b-7e3d-49f0-9751-0ac77475789f', N'4bfd1dd9-3b59-4136-82b3-8cf9239b442a', N'Headphone', 200, 0, N'HeadphoneProduct', N'product/images\b9151ad7-1ce2-4fef-b00d-a71e820378b0_download (5).jpg', N'False')
+GO
+INSERT [dbo].[AddProducts] ([Id], [Pid], [ProductName], [Price], [Quantity], [ProductDescription], [ProductImg], [Payment]) VALUES (N'79aaf2ca-77dc-4bad-aade-35d482b59887', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'Bag', 100, 9, N'Good', N'product/images\137c0a67-ca64-4f6b-8381-f7bab18eaf35_images.jpg', N'False')
+GO
+INSERT [dbo].[AddProducts] ([Id], [Pid], [ProductName], [Price], [Quantity], [ProductDescription], [ProductImg], [Payment]) VALUES (N'739c02fe-d84a-4fc3-a2cb-35fd929db67b', N'8b1f608d-87fa-445f-adb8-e577888acefd', N'Bluetooth ', 500, 10, N'Good', N'Product/Images/54670b05-2c44-4689-b362-fcc68ffa8984_download (6).jpg', N'False')
+GO
+INSERT [dbo].[AddProducts] ([Id], [Pid], [ProductName], [Price], [Quantity], [ProductDescription], [ProductImg], [Payment]) VALUES (N'03f43b05-a4fc-4943-96ad-41e0b5cff73b', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'Laptop', 12000, 1, N'Good', N'Product/Images/2d8bf9ed-a9c8-4f0e-84cd-1e141274406d_images (3).jpg', N'False')
+GO
+INSERT [dbo].[AddProducts] ([Id], [Pid], [ProductName], [Price], [Quantity], [ProductDescription], [ProductImg], [Payment]) VALUES (N'540a6348-48cb-4e44-9a54-f305345a5a5f', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'Shoe''s ', 400, 10, N'Good', N'product/images\4e3120ed-9685-4bfd-9229-07aa32437cff_images (4).jpg', N'False')
+GO
+INSERT [dbo].[Cars] ([id], [Name], [EstablishedYear], [Price]) VALUES (N'3fa85f64-5717-4562-b3fc-2c963f66afa6', N'sd', 209, 87)
+GO
+INSERT [dbo].[Customers] ([Id], [FirstName], [LastName], [PhoneNo], [Email]) VALUES (N'02aa991b-9519-4534-f0e4-08dcd6f75591', N'Audi', N'car', N'5654643', N'audi@gmail.com')
+GO
+INSERT [dbo].[Customers] ([Id], [FirstName], [LastName], [PhoneNo], [Email]) VALUES (N'e0d97719-7dc6-448d-9e10-08dcd86a96fd', N'BMW', N'Car', N'4324325345', N'bmw@gmail.com')
+GO
+INSERT [dbo].[Customers] ([Id], [FirstName], [LastName], [PhoneNo], [Email]) VALUES (N'bc44a230-bd85-4d0a-7a63-08dcd88feb52', N'gfd', N'gfd', N'gdf', N'gfd')
+GO
+INSERT [dbo].[Customers] ([Id], [FirstName], [LastName], [PhoneNo], [Email]) VALUES (N'52f579c8-0d54-40ad-7a64-08dcd88feb52', N'vcb', N'bvc', N'bvc67', N'vbcbc')
+GO
+INSERT [dbo].[Customers] ([Id], [FirstName], [LastName], [PhoneNo], [Email]) VALUES (N'3fa85f64-5717-4562-b3fc-2c963f66afa1', N'fsd', N'strding', N'strsing', N'fsd')
+GO
+INSERT [dbo].[Customers] ([Id], [FirstName], [LastName], [PhoneNo], [Email]) VALUES (N'3fa85f64-5717-4562-b3fc-2c963f66afa3', N'strding', N'strghing', N'strisdsng', N'strisdng')
+GO
+INSERT [dbo].[Customers] ([Id], [FirstName], [LastName], [PhoneNo], [Email]) VALUES (N'3fa85f64-5717-4562-b3fc-2c963f66afa4', N'strding', N'strghing', N'strisdsng', N'strisdng')
+GO
+INSERT [dbo].[Customers] ([Id], [FirstName], [LastName], [PhoneNo], [Email]) VALUES (N'3fa85f64-5717-4562-b3fc-2c963f66afa6', N'gf', N'strging', N'fg', N'gd')
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'300c2567-59d2-448d-9304-1c0a119d0645', N'book', N'noo@gmail.com', 12, N'MNB', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'd6c9166b-ce40-4729-8b91-205db42253b0', N'cat', N'cat@gmail.com', 12, N'MTM', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'e45e4e7e-6ada-4fb4-b91d-28bcb78f3356', N'das', N'das', 21, N'dsa', N'Persional/Images/download (9).jpg')
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'4a7e0007-5ec9-4aaa-b6ea-333c37959a46', N'fdsfsd', N'dsfs@gmail.com', 45, N'tftrdt', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'585cbde5-9e2d-4b8f-a068-398e197f9de5', N'ram', N'ram@gmail.com', 12, N'kl', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'6185f363-28a8-49d3-8f0d-527063ca2a14', N'lop', N'lop@gmail.com', 22, N'PPLKJ', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'd53cc22e-7930-422b-a27a-745856c16751', N'rohan', N'rohan@gmail.com', 21, N'Kollam', N'Persional/Images/images (7).jpg')
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'9d078ff5-872a-40c7-a291-7b17faa8de97', N'unnai', N'unnai@gmail.com', 45, N'Kerla', N'Persional\Images\b66a5ab7-0d2f-4d99-ba12-8e3a603b277b_8224abec3e56c8893048d91d79827142.png')
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'10c193e4-8d63-4faa-a78d-891b78047a22', N'iqoo', N'iq@gmail.com', 12, N'MTM', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'54049d5e-3ead-4ae3-b007-928add1bdcd9', N'dsadas', N'ggty@gmail.com', 5, N'tyfuy', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'39ecc580-89fd-4924-97cc-94e7cf2b23a1', N'fdsfsd', N'dsfs@gmail.com', 45, N'tftrdt', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'51a7cfff-f62f-4cf5-a681-955d3bb81d66', N'pops', N'pop@gmail.com', 12, N'MTM', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'ad5c5e83-6376-452f-9510-af91a017de24', N'dfsdf', N'gfd@gmail.com', 67, N'ytftrt', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'5496b6c9-0fb9-4bf2-8b76-ba9dcb125f69', N'maghf', N'gf@mail.com', 5, N'ghfty', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'64079250-01ea-4261-883e-ce0e3a932ffd', N'ytdrdr', N'trdrtd@gmil.com', 34, N'frdftrhdsth', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'a5909c8a-7373-4ab2-99de-e8d3e536a8d1', N'redmi', N'redmi@gmail.com', 12, N'MTM', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'249c3a8c-00ed-43fa-b30f-ea3bd6a026cd', N'hgtf', N'hgf@gmail.com', 8, N'ftyf', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'dab7a71e-1865-44bc-aa14-f3b588204cae', N'dasdas', N'fc@gmail.com', 56, N'tyftr', NULL)
+GO
+INSERT [dbo].[PersonalDetails] ([Id], [Name], [Email], [Age], [Address], [Imagepath]) VALUES (N'0b8f009b-2525-406f-8385-f801144bb698', N'ram', N'ram@gmail.com', 21, N'TVM', NULL)
+GO
+INSERT [dbo].[productPayMents] ([Id], [Pid], [Uid], [Cid], [Amount], [Address], [Payment]) VALUES (N'6b5b9f86-b599-4b59-bac8-08dce21b93e7', N'540a6348-48cb-4e44-9a54-f305345a5a5f', N'51a7cfff-f62f-4cf5-a681-955d3bb81d66', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'1600', N'MTM', N'True')
+GO
+INSERT [dbo].[productPayMents] ([Id], [Pid], [Uid], [Cid], [Amount], [Address], [Payment]) VALUES (N'30ca20c7-ae2e-4469-9000-08dce42d380d', N'540a6348-48cb-4e44-9a54-f305345a5a5f', N'51a7cfff-f62f-4cf5-a681-955d3bb81d66', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'800', N'dsad', N'True')
+GO
+INSERT [dbo].[productPayMents] ([Id], [Pid], [Uid], [Cid], [Amount], [Address], [Payment]) VALUES (N'bec93a92-deb4-4743-636e-08dce44818af', N'540a6348-48cb-4e44-9a54-f305345a5a5f', N'51a7cfff-f62f-4cf5-a681-955d3bb81d66', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'400', N'dfdsf', N'True')
+GO
+INSERT [dbo].[productPayMents] ([Id], [Pid], [Uid], [Cid], [Amount], [Address], [Payment]) VALUES (N'4ffa8bb4-b6e6-463d-cece-08dce452e9f4', N'540a6348-48cb-4e44-9a54-f305345a5a5f', N'51a7cfff-f62f-4cf5-a681-955d3bb81d66', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'400', N'tryr', N'True')
+GO
+INSERT [dbo].[productPayMents] ([Id], [Pid], [Uid], [Cid], [Amount], [Address], [Payment]) VALUES (N'1b292877-2086-43e7-cecf-08dce452e9f4', N'79aaf2ca-77dc-4bad-aade-35d482b59887', N'51a7cfff-f62f-4cf5-a681-955d3bb81d66', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'200', N'fdsfsd', N'True')
+GO
+INSERT [dbo].[productPayMents] ([Id], [Pid], [Uid], [Cid], [Amount], [Address], [Payment]) VALUES (N'0dd57c7d-84bf-4baf-ced0-08dce452e9f4', N'79aaf2ca-77dc-4bad-aade-35d482b59887', N'0b8f009b-2525-406f-8385-f801144bb698', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'200', N'rrr', N'True')
+GO
+INSERT [dbo].[productPayMents] ([Id], [Pid], [Uid], [Cid], [Amount], [Address], [Payment]) VALUES (N'b87ce708-f6c3-476d-ced1-08dce452e9f4', N'79aaf2ca-77dc-4bad-aade-35d482b59887', N'0b8f009b-2525-406f-8385-f801144bb698', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'100', N'das', N'True')
+GO
+INSERT [dbo].[productPayMents] ([Id], [Pid], [Uid], [Cid], [Amount], [Address], [Payment]) VALUES (N'534b71ac-5472-414c-7983-08dcf27ea488', N'79aaf2ca-77dc-4bad-aade-35d482b59887', N'0b8f009b-2525-406f-8385-f801144bb698', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'100', N'Kerla', N'True')
+GO
+INSERT [dbo].[productPayMents] ([Id], [Pid], [Uid], [Cid], [Amount], [Address], [Payment]) VALUES (N'c5e51d05-0bbc-4e93-b739-08dcf41005fc', N'79aaf2ca-77dc-4bad-aade-35d482b59887', N'd53cc22e-7930-422b-a27a-745856c16751', N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'100', N'buy', N'True')
+GO
+INSERT [dbo].[Regs] ([Id], [UserName], [Password], [Email], [Age], [Address], [ImagePath]) VALUES (N'661852fd-ea5b-471f-fc75-08dcded16294', N'sam', N'sam', N'sam@gmail.com', 12, N'MTM', N'RegApi/Images/Screenshot 2023-11-09 193543.png')
+GO
+INSERT [dbo].[Regs] ([Id], [UserName], [Password], [Email], [Age], [Address], [ImagePath]) VALUES (N'6559671e-5048-4785-90ef-08dcdef8e80f', N'ram', N'ram123', N'ram@gmail.com', 12, N'TVM', N'RegApi/Images/Screenshot 2024-04-28 193145.png')
+GO
+INSERT [dbo].[Regs] ([Id], [UserName], [Password], [Email], [Age], [Address], [ImagePath]) VALUES (N'1b7ee629-65a2-4be5-554d-08dcdefc963c', N'pops', N'pop', N'pop@gmail.com', 12, N'mmm', N'RegApi/Images/Screenshot 2023-11-09 193729.png')
+GO
+INSERT [dbo].[Regs] ([Id], [UserName], [Password], [Email], [Age], [Address], [ImagePath]) VALUES (N'5967d179-d556-4fae-ac7a-08dcdfcd1407', N'abi', N'abi123', N'abi@gmail.com', 12, N'MTM', N'RegApi/Images/Screenshot 2024-05-18 152435.png')
+GO
+INSERT [dbo].[shopOwners] ([Id], [ShopLicens], [ShopName], [ShopType], [ShopEmail]) VALUES (N'4bfd1dd9-3b59-4136-82b3-8cf9239b442a', N'ABCDEFG123', N'SamShop', N'Food', N'food@gmail.com')
+GO
+INSERT [dbo].[shopOwners] ([Id], [ShopLicens], [ShopName], [ShopType], [ShopEmail]) VALUES (N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'MGR', N'MGR Shpo', N'Food', N'mgr@gmail.com')
+GO
+INSERT [dbo].[shopOwners] ([Id], [ShopLicens], [ShopName], [ShopType], [ShopEmail]) VALUES (N'8b1f608d-87fa-445f-adb8-e577888acefd', N'ZXY', N'Viyanz', N'Food', N'viyanz@gmail.com')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'300c2567-59d2-448d-9304-1c0a119d0645', N'book', N'book', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'd6c9166b-ce40-4729-8b91-205db42253b0', N'cat', N'cat123', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'e45e4e7e-6ada-4fb4-b91d-28bcb78f3356', N'das', N'da', N'das', N'1')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'4a7e0007-5ec9-4aaa-b6ea-333c37959a46', N'qw', N'wq', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'585cbde5-9e2d-4b8f-a068-398e197f9de5', N'keyboard', N'key', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'6185f363-28a8-49d3-8f0d-527063ca2a14', N'mouse', N'mouse', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'd53cc22e-7930-422b-a27a-745856c16751', N'rohan', N'rohan123', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'9d078ff5-872a-40c7-a291-7b17faa8de97', N'unnai', N'unnai123', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'10c193e4-8d63-4faa-a78d-891b78047a22', N'iqoo', N'z5', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'4bfd1dd9-3b59-4136-82b3-8cf9239b442a', N'sam', N'sam123', N'ShopOwner', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'3e5f034a-af69-407a-8b64-8d2f9a0ea4cd', N'mgr', N'mgr', N'ShopOwner', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'54049d5e-3ead-4ae3-b007-928add1bdcd9', N'abc', N'abc', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'39ecc580-89fd-4924-97cc-94e7cf2b23a1', N'qw', N'wq', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'51a7cfff-f62f-4cf5-a681-955d3bb81d66', N'pops', N'pop', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'ad5c5e83-6376-452f-9510-af91a017de24', N'ytftrhddth', N'fdsf', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'5496b6c9-0fb9-4bf2-8b76-ba9dcb125f69', N'kl', N'lk', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'64079250-01ea-4261-883e-ce0e3a932ffd', N'qq', N'aq', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'8b1f608d-87fa-445f-adb8-e577888acefd', N'viyan', N'viyan', N'ShopOwner', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'a5909c8a-7373-4ab2-99de-e8d3e536a8d1', N'redmi', N'redmi', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'249c3a8c-00ed-43fa-b30f-ea3bd6a026cd', N'gg', N'hh', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'dab7a71e-1865-44bc-aa14-f3b588204cae', N'pp', N'oo', N'User', N'Active')
+GO
+INSERT [dbo].[UserCredentials] ([Id], [UserName], [Password], [UserType], [Status]) VALUES (N'0b8f009b-2525-406f-8385-f801144bb698', N'ram', N'pwd', N'User', N'Active')
+GO
+ALTER TABLE [dbo].[productPayMents] ADD  DEFAULT (N'') FOR [Address]
+GO
+ALTER TABLE [dbo].[productPayMents] ADD  DEFAULT (N'') FOR [Payment]
+GO
+USE [master]
+GO
+ALTER DATABASE [AP] SET  READ_WRITE 
+GO
+
+*
