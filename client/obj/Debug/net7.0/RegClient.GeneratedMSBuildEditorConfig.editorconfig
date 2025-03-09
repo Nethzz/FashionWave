@@ -1,0 +1,171 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RegClient
+build_property.RootNamespace = RegClient
+build_property.ProjectDir = C:\Users\lichu\Documents\neethu\ASP.NET-20250121T134922Z-001\ASP.NET\RegClient\RegClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\lichu\Documents\neethu\ASP.NET-20250121T134922Z-001\ASP.NET\RegClient\RegClient
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Landing/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZGluZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/DemoLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXERlbW9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/DemoView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXERlbW9WaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/ProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXFByb2R1Y3RMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/Shop_reg.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXFNob3BfcmVnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Registration/updateprofile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXHVwZGF0ZXByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shared/_AdminNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbk5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shared/_LandingPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYW5kaW5nUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shared/_Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shared/_ShopOwnerNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaG9wT3duZXJOYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shared/_UserNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTmF2LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shop/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxBZGRQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shop/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shop/DetailsProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxEZXRhaWxzUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shop/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shop/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shop/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shop/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shop/ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxWaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lichu/Documents/neethu/ASP.NET-20250121T134922Z-001/ASP.NET/RegClient/RegClient/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-rr3jgdrbbp
